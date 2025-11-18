@@ -1,0 +1,39 @@
+/* percentage hamesha hi parent ke respect m dekhi jaati haina */
+/* #outer{
+    height: 600px;
+    width: 400px;
+    background-color: black;
+}
+#inner{
+    height: 50%;
+    width: 50%;
+    background-color: rebeccapurple;
+} */
+*{
+    margin: 0;       /* default margin remove */
+    padding: 0;      /* default padding remove */
+}
+html ,body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1632707494078-165805600ffc?q=80&w=1149&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  /* background-position: bottom; */
+}
+
+#box{
+    height: 100px;
+    width: 200px;
+    background-color: blue;
+    margin: 100px;
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid black;
+}

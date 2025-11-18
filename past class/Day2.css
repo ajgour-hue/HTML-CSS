@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#box1{
+    height: 100px;
+    width: 200px;
+    background-color: rebeccapurple;
+    border-radius: 20px;
+    border: 4px solid black;
+}
+#box2{
+    /* Linear Gradiant */
+    height: 100px;
+    width: 200px;
+    /* background: linear-gradient(red , yellow); */
+    /* background: linear-gradient(to right ,red , yellow); */
+    /* background: linear-gradient(to left ,red , yellow); */
+    /* background: linear-gradient(to top ,red , yellow); */
+   /*  background: linear-gradient(to bottom ,red , yellow); */ 
+
+   /* digonally */
+/* background:linear-gradient(45deg , black, white) ; */
+background:linear-gradient(to bottom right, black, white) ;
+}
+
+#box3{
+    /* Radial gradiant */
+    height: 100px;
+    width: 200px;
+    border-radius: 50%;
+    background: radial-gradient( orange ,purple , black , yellow, red, green);
+}
+
+#box4{
+    /* conic pie chart design */
+    height: 100px;
+    width: 200px;
+    border-radius: 60%;
+background: conic-gradient(red , yellow , black, white , green , purple , orange , rebeccapurple);
+}

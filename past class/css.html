@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    #controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    #preview {
+      display: grid;
+      width: 300px;
+      height: 300px;
+      background: #eee;
+      border: 2px solid #ccc;
+    }
+    .grid-item {
+      background: lightcoral;
+      border: 1px solid white;
+    }
+    textarea {
+      width: 300px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Grid Generator</h2>
+
+  <div id="controls">
+    <label>Rows: <input type="number" id="rows" value="3" min="1"></label>
+    <label>Columns: <input type="number" id="cols" value="3" min="1"></label>
+    <label>Gap: <input type="number" id="gap" value="10" min="0"></label>
+  </div>
+
+  <div id="preview"></div>
+
+  <textarea id="output" readonly></textarea>
+
+  <button id="copy">Copy CSS</button>
+
+  <script>
+    const preview = document.getElementById('preview');
+    const output = document.getElementById('output');
+
+    const inputs = {
+      rows: document.getElementById('rows'),
+      cols: document.getElementById('cols'),
+      gap: document.getElementById('gap')
+    };
+
+    function updateGrid() {
+      const rows = inputs.rows.value;
+      const cols = inputs.cols.value;
+      const gap = inputs.gap.value + 'px';
+
+      preview.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+      preview.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      preview.style.gap = gap;
+
+      preview.innerHTML = '';
+      for (let i = 0; i < rows * cols; i++) {
+        const div = document.createElement('div');
+        div.className = 'grid-item';
+        preview.appendChild(div);
+      }
+
+      output.value = `.grid-container {
+  display: grid;
+  grid-template-rows: repeat(${rows}, 1fr);
+  grid-template-columns: repeat(${cols}, 1fr);
+  gap: ${gap};
+}`;
+    }
+
+    Object.values(inputs).forEach(inp => inp.addEventListener('input', updateGrid));
+
+    document.getElementById('copy').addEventListener('click', () => {
+      navigator.clipboard.writeText(output.value);
+      alert('CSS Copied!');
+    });
+
+    updateGrid();
+  </script>
+
+</body>
+</html>
