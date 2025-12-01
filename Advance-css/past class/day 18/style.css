@@ -1,0 +1,47 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html,
+ body {
+     height: 100%;
+     width: 100%;
+ }
+
+ /* *
+    main {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .box {
+      background-color: red;
+      height: 300px;
+      width: 300px;
+      border-radius: 10px;
+      border: 2px solid black;
+      
+    } */
+
+ main {
+     height: 100%;
+     width: 100%;
+     background-color: bisque;
+     padding: 10px;
+       display: grid;
+     grid-template-columns: repeat(4, 3fr);
+     grid-template-rows: 200px 200px;
+     gap: 10px;
+     }
+
+ .container {
+  width: 100%;               /* fill grid cell horizontally */
+  height: 100%;              /* fill grid cell vertically */
+  background-color: red;
+  border-radius: 10px;
+ }

@@ -1,0 +1,53 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html,
+ body {
+     height: 100%;
+     width: 100%;
+ }
+
+
+ main{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 300px 1fr  300px;
+    grid-template-rows: 60px 1fr 80px;
+    grid-gap: 10px;
+   grid-template-areas: 
+  "header header header"
+  "aside  section right"
+  "footer footer footer";
+ }
+ header{
+    background-color: red;
+     grid-area: header;
+ }
+ aside{
+    background-color: aqua;
+        grid-area:  aside;
+         border-radius: 10px;
+ }
+ section{
+    background-color: maroon;
+       grid-area:  section;
+         border-radius: 10px;
+         background-image: url(https://plus.unsplash.com/premium_photo-1760124267696-0fc8c30565ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600);
+         background-size: cover;
+ }
+ footer{
+    background-color: darkgray;
+        grid-area:  footer;
+ }
+ .right {
+  background-color: lightgreen;
+  grid-area: right;
+  border-radius: 10px;
+}
+
+

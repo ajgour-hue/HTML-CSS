@@ -1,0 +1,66 @@
+*{
+    margin: 0;       /* default margin remove */
+    padding: 0;      /* default padding remove */
+}
+html ,body {
+    height: 100%;
+    width: 100%;
+}
+
+/* #main {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+} */
+/* #main h1{
+    color: transparent;
+    background: linear-gradient(red , blue);
+    background-clip: text;
+}  */
+
+/* #main h1{
+    background-image: url(https://imgs.search.brave.com/rlwwcPefN0nrJDKApk7JqahJk4QeigygF75g1XtMHMo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTMuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhaV1oyZURKemVt/NXNZbUUxZDJ4eE1H/OWxNV1Z6ZVc5M2VH/MXdlWE14TVc1bk9I/YzFkVFk0WmlabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vN3lvam9RdGV2/ak9DSS8yMDAuZ2lm.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+   color: transparent;
+} */
+
+/* #main h1{
+ color: aliceblue;
+ background-color: black;
+ display: inline-block;
+}  */
+
+/* #main h1{
+   color: aliceblue;
+ background-color: black;
+ border: 2px solid tan;
+ -webkit-text-stroke: 2px white ;
+}  */
+
+
+#parent{
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+#parent::-webkit-scrollbar{
+    background-color: blueviolet;
+}
+#parent::-webkit-scrollbar-thumb{
+    background-color: royalblue;
+}
+#child{
+    height: 90%;
+    width: 450px;
+    background-color: aliceblue;  
+    border-radius: 20px;
+    flex-shrink: 0;
+}

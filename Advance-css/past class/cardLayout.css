@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+     height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+} 
+
+#child1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    justify-content: space-evenly;
+    height: 280px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
+}
+
+#child1:hover{
+ transform: translateY(5%);
+}
+#child1 img{
+    
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+#child1 h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; 
+  font-size: 22px;
+}
+#child1 p{
+     font-family: 'Montserrat', sans-serif;
+   text-align: center;
+    color: #555;
+  font-size: 14px;
+}
+#child1 button{
+    border-radius: 20px;
+    padding: 6px 16px;
+    background-color: rgb(52,204,255);
+border: 2px solid rgb(52,204,255);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+transition: all 0.3s ease;
+}
+#child1 button:hover{
+    background-color: transparent;
+    color: rgba(52,204,255);
+}
+
